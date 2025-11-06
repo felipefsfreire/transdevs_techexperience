@@ -1,0 +1,12 @@
+# .streamlit/config.toml
+[server]
+port = 8501
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[runner]
+# Estes comandos serão executados ANTES do aplicativo Streamlit iniciar, uma vez por deploy.
+# Eles garantem que os recursos de NLP necessários para 'run_eda.py' estejam presentes.
+post_install = "python nltk_download_script.py && python -m spacy download pt_core_news_sm"

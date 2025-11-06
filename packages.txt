@@ -1,0 +1,15 @@
+# packages.txt
+# Este arquivo é executado *antes* do seu app principal.
+# Use-o para comandos que geram dados/modelos.
+
+# Comando para executar o pipeline de dados:
+python run_pipeline.py
+python run_eda.py
+
+# Para NLTK stopwords e punkt (se não estiverem no spacy ou se NLTK for primário)
+python nltk_download_script.py
+
+# Para spacy (já baixado com `python -m spacy download pt_core_news_sm` no `deploy`)
+# Este comando não precisa ser executado aqui se você já fez o download via `pip install spacy` e o modelo já está no pacote do spacy.
+# Se você tivesse baixado para uma pasta customizada, poderia ser:
+# python -m spacy download --target ./spacy_models pt_core_news_sm
